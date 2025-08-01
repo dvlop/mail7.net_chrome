@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Email Checker",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Find and validate email addresses on any webpage with professional email validation",
   "permissions": [
     "activeTab",

@@ -7,7 +7,7 @@ Successfully converted the Russian "Mail7 Email Scanner" extension to English "E
 
 ### 1. Extension Identity
 - **Name**: Mail7 Email Scanner → Email Checker
-- **Version**: 1.1 → 1.2.0
+- **Version**: 1.1 → 1.3.0
 - **Description**: Updated to English with professional marketing copy
 - **Language**: Russian → English
 
@@ -118,7 +118,7 @@ Successfully converted the Russian "Mail7 Email Scanner" extension to English "E
 - [x] Publishing guide created
 - [x] Testing checklist provided
 - [x] Code cleaned and optimized
-- [x] Version updated to 1.2.0
+- [x] Version updated to 1.3.0
 
 ### 📦 Package Contents
 ```

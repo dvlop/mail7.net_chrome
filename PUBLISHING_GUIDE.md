@@ -61,9 +61,10 @@
 
 ### 4. Permissions Justification
 Be prepared to explain why the extension needs:
-- `activeTab`: To scan the current webpage
-- `storage`: To save email lists locally
-- `scripting`: To execute content scripts
+- `activeTab`: To scan the current webpage for email addresses
+- `storage`: To save email lists locally in the browser
+- `scripting`: To execute content scripts for email scanning
+- `tabs`: To open mail7.net website when users click the header link
 - `https://mail7.net/*`: To validate emails via API
 
 ### 5. Content Rating
@@ -84,8 +85,9 @@ Be prepared to explain why the extension needs:
 - [ ] Remove any debug console.log statements
 - [ ] Test on multiple websites
 - [ ] Verify API endpoints are working
-- [ ] Check all permissions are necessary
+- [ ] Check all permissions are necessary and justified
 - [ ] Ensure privacy policy is clear
+- [ ] Justify why tabs permission is needed (header link functionality)
 
 ### Testing Before Submission
 1. **Load as unpacked extension**
