@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой тест Mail7 Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .email {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Простой тест Mail7 Email Scanner</h1>
+    
+    <div class="test-section">
+        <h2>1. Email-адреса в обычном тексте:</h2>
+        <p>Свяжитесь с нами: <span class="email">test@example.com</span></p>
+        <p>Поддержка: <span class="email">support@test.org</span></p>
+        <p>Информация: <span class="email">info@company.net</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Email-адреса в ссылках:</h2>
+        <p>
+            <a href="mailto:contact@example.com">Написать нам</a> | 
+            <a href="mailto:admin@test.org">Администратор</a>
+        </p>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Email-адреса в атрибутах:</h2>
+        <div data-email="data@example.com">Элемент с data-email</div>
+        <input type="email" value="input@test.org" placeholder="Введите email">
+        <input type="text" placeholder="example@company.org">
+    </div>
+
+    <div class="test-section">
+        <h2>4. Email-адреса в title:</h2>
+        <span title="title@example.com">Элемент с title</span>
+        <div title="info@test.org">Информация</div>
+    </div>
+
+    <div class="test-section">
+        <h2>5. Сложные email-адреса:</h2>
+        <p>С подчеркиванием: <span class="email">user_name@example.com</span></p>
+        <p>С точками: <span class="email">user.name@test.org</span></p>
+        <p>С дефисами: <span class="email">user-name@company.net</span></p>
+        <p>С цифрами: <span class="email">user123@example.org</span></p>
+        <p>С плюсом: <span class="email">user+tag@test.com</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>6. Невалидные email-адреса (для проверки фильтрации):</h2>
+        <p>Неполный: <span class="email">user@</span></p>
+        <p>Без домена: <span class="email">user@.com</span></p>
+        <p>Неправильный формат: <span class="email">user.example.com</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>7. Дублирующиеся email-адреса:</h2>
+        <p>Первый: <span class="email">duplicate@example.com</span></p>
+        <p>Второй: <span class="email">duplicate@example.com</span></p>
+        <p>Третий: <span class="email">DUPLICATE@EXAMPLE.COM</span></p>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 5px;">
+        <h3>Инструкции по тестированию:</h3>
+        <ol>
+            <li>Установите плагин Mail7 Email Scanner</li>
+            <li>Откройте эту страницу</li>
+            <li>Нажмите на иконку плагина</li>
+            <li>Нажмите "Сканировать страницу"</li>
+            <li>Должно быть найдено около 10+ уникальных email-адресов</li>
+        </ol>
+        
+        <h4>Ожидаемые результаты:</h4>
+        <ul>
+            <li>Должно быть найдено 10+ уникальных email-адресов</li>
+            <li>Дубликаты должны быть удалены</li>
+            <li>Невалидные адреса должны быть отфильтрованы</li>
+            <li>Email-адреса должны быть приведены к нижнему регистру</li>
+        </ul>
+    </div>
+
+    <script>
+        // Добавляем email-адрес динамически
+        document.addEventListener('DOMContentLoaded', function() {
+            const dynamicSection = document.createElement('div');
+            dynamicSection.className = 'test-section';
+            dynamicSection.innerHTML = `
+                <h2>8. Динамически добавленные email-адреса:</h2>
+                <p>JavaScript email: <span class="email">dynamic@example.com</span></p>
+                <p>Еще один: <span class="email">js@test.org</span></p>
+            `;
+            document.body.appendChild(dynamicSection);
+        });
+    </script>
+</body>
+</html> 

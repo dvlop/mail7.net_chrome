@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница для Mail7 Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .email-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .email-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .test-email {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .hidden {
+            display: none;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тестовая страница для Mail7 Email Scanner</h1>
+    <p>Эта страница содержит различные email-адреса для тестирования плагина.</p>
+
+    <div class="email-section">
+        <h3>1. Email-адреса в обычном тексте:</h3>
+        <p>Свяжитесь с нами: <span class="test-email">contact@example.com</span> или <span class="test-email">support@test.org</span></p>
+        <p>Для вопросов пишите на <span class="test-email">info@company.net</span></p>
+    </div>
+
+    <div class="email-section">
+        <h3>2. Email-адреса в ссылках mailto:</h3>
+        <p>
+            <a href="mailto:user@example.com">Написать пользователю</a> | 
+            <a href="mailto:admin@test.org?subject=Вопрос">Администратор</a> | 
+            <a href="mailto:sales@company.net">Отдел продаж</a>
+        </p>
+    </div>
+
+    <div class="email-section">
+        <h3>3. Email-адреса в data-атрибутах:</h3>
+        <div data-email="data@example.com">Элемент с data-email</div>
+        <span data-contact="contact@test.org">Контактная информация</span>
+        <div data-user-email="user@company.net">Email пользователя</div>
+    </div>
+
+    <div class="email-section">
+        <h3>4. Email-адреса в input полях:</h3>
+        <input type="email" value="input@example.com" placeholder="Введите email">
+        <input type="text" value="text@test.org" placeholder="Введите email">
+    </div>
+
+    <div class="email-section">
+        <h3>5. Email-адреса в placeholder:</h3>
+        <input type="text" placeholder="example@test.com">
+        <input type="email" placeholder="user@company.org">
+    </div>
+
+    <div class="email-section">
+        <h3>6. Email-адреса в title атрибутах:</h3>
+        <span title="title@example.com">Элемент с title</span>
+        <div title="info@test.org">Информация</div>
+    </div>
+
+    <div class="email-section">
+        <h3>7. Email-адреса в alt атрибутах изображений:</h3>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+             alt="image@example.com" width="1" height="1">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+             alt="photo@test.org" width="1" height="1">
+    </div>
+
+    <div class="email-section">
+        <h3>8. Email-адреса в aria-label:</h3>
+        <button aria-label="button@example.com">Кнопка</button>
+        <div aria-label="div@test.org">Элемент с aria-label</div>
+    </div>
+
+    <div class="email-section">
+        <h3>9. Email-адреса в скрытых элементах:</h3>
+        <div class="hidden">Скрытый email: hidden@example.com</div>
+        <div class="invisible">Невидимый email: invisible@test.org</div>
+    </div>
+
+    <div class="email-section">
+        <h3>10. Email-адреса в комментариях HTML:</h3>
+        <!-- comment@example.com -->
+        <!-- hidden-email@test.org -->
+    </div>
+
+    <div class="email-section">
+        <h3>11. Сложные email-адреса:</h3>
+        <p>Тест с подчеркиваниями: <span class="test-email">user_name@example.com</span></p>
+        <p>Тест с точками: <span class="test-email">user.name@test.org</span></p>
+        <p>Тест с дефисами: <span class="test-email">user-name@company.net</span></p>
+        <p>Тест с цифрами: <span class="test-email">user123@example.org</span></p>
+        <p>Тест с плюсом: <span class="test-email">user+tag@test.com</span></p>
+    </div>
+
+    <div class="email-section">
+        <h3>12. Невалидные email-адреса (для проверки фильтрации):</h3>
+        <p>Неполный: <span class="test-email">user@</span></p>
+        <p>Без домена: <span class="test-email">user@.com</span></p>
+        <p>Неправильный формат: <span class="test-email">user.example.com</span></p>
+    </div>
+
+    <div class="email-section">
+        <h3>13. Дублирующиеся email-адреса:</h3>
+        <p>Первый: <span class="test-email">duplicate@example.com</span></p>
+        <p>Второй: <span class="test-email">duplicate@example.com</span></p>
+        <p>Третий: <span class="test-email">DUPLICATE@EXAMPLE.COM</span></p>
+    </div>
+
+    <script>
+        // Добавляем email-адреса динамически
+        document.addEventListener('DOMContentLoaded', function() {
+            const dynamicSection = document.createElement('div');
+            dynamicSection.className = 'email-section';
+            dynamicSection.innerHTML = `
+                <h3>14. Динамически добавленные email-адреса:</h3>
+                <p>JavaScript email: <span class="test-email">dynamic@example.com</span></p>
+                <p>Еще один: <span class="test-email">js@test.org</span></p>
+            `;
+            document.body.appendChild(dynamicSection);
+        });
+    </script>
+
+    <div style="margin-top: 50px; padding: 20px; background: #f0f0f0; border-radius: 5px;">
+        <h3>Инструкции по тестированию:</h3>
+        <ol>
+            <li>Установите плагин Mail7 Email Scanner в Chrome</li>
+            <li>Откройте эту страницу</li>
+            <li>Нажмите на иконку плагина</li>
+            <li>Нажмите "Сканировать страницу"</li>
+            <li>Проверьте, что все email-адреса найдены</li>
+            <li>Откройте консоль разработчика (F12) для просмотра отладочной информации</li>
+        </ol>
+        
+        <h4>Ожидаемые результаты:</h4>
+        <ul>
+            <li>Должно быть найдено около 20+ уникальных email-адресов</li>
+            <li>Дубликаты должны быть удалены</li>
+            <li>Невалидные адреса должны быть отфильтрованы</li>
+            <li>Email-адреса должны быть приведены к нижнему регистру</li>
+        </ul>
+    </div>
+</body>
+</html> 

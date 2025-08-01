@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Checker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="https://mail7.net" target="_blank" class="header-link">
+                <div class="header-content">
+                    <div class="header-icon">📧</div>
+                    <div class="header-text">
+                        <h1>Email Checker</h1>
+                        <p class="subtitle">Fast and accurate email address validation</p>
+                    </div>
+                </div>
+            </a>
+        </header>
+
+        <main class="main">
+            <div class="scan-section">
+                <button id="scanBtn" class="btn btn-primary">
+                    <span class="btn-icon">🔍</span>
+                    Validate Email
+                </button>
+                <div id="scanStatus" class="status"></div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h3>Found Addresses:</h3>
+                <div class="stats">
+                    <span id="totalEmails">0</span> found,
+                    <span id="validEmails">0</span> valid,
+                    <span id="invalidEmails">0</span> invalid
+                </div>
+                
+                <div class="email-list" id="emailList"></div>
+                
+                <div class="actions">
+                    <button id="saveListBtn" class="btn btn-secondary">
+                        <span class="btn-icon">💾</span>
+                        Save to List
+                    </button>
+                    <button id="downloadBtn" class="btn btn-success">
+                        <span class="btn-icon">⬇️</span>
+                        Download CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="saved-lists-section">
+                <h3>Saved Lists:</h3>
+                <div id="savedLists" class="saved-lists"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="progress-bar" id="progressBar" style="display: none;">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 
